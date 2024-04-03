@@ -4,3 +4,8 @@ param sku = 'Standard'
 param capacity = 4
 param storageType = 'Standard_LRS'
 param storageAccountName = 'myStorageAccountName'
+
+  tags: {
+    tagName1: 'tagValue1'
+    tagName2: 'tagValue2'
+  }
