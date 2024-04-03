@@ -2,3 +2,4 @@
 param location = 'westus'
 param sku = 'Standard'
 param capacity = 4
+param storageType = 'Standard_LRS'
