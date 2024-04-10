@@ -8,5 +8,6 @@ param storageAccountName = 'myStorageAccountName'
   tags: {
     tagName1: 'tagValue1'
     tagName2: 'tagValue2'
+    tagName3: 'tagValue3'
     tagName4: 'tagValue4'
   }
