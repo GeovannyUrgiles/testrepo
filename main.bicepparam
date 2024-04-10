@@ -4,7 +4,7 @@ param sku = 'Standard'
 param capacity = 4
 
 tags: {
-tagName1: 'tagValue1'
+tagName1: 'tagValue1-1'
 tagName2: 'tagValue2'
 tagName3: 'tagValue3'
 tagName4: 'tagValue4'
