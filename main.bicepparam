@@ -2,12 +2,18 @@
 param location = 'westus'
 param sku = 'Standard'
 param capacity = 4
+
+tags: {
+tagName1: 'tagValue1'
+tagName2: 'tagValue2'
+tagName3: 'tagValue3'
+tagName4: 'tagValue4'
+tagName7: 'tagValue7'
+}
 param storageType = 'Standard_LRS'
 param storageAccountName = 'myStorageAccountName'
 
 tags: {
-tagName3: 'tagValue3'
-tagName4: 'tagValue4'
 tagName1: 'tagValue1'
 tagName2: 'tagValue2'
 }
