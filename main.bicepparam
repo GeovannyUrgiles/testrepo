@@ -17,3 +17,13 @@ tagName7: 'tagValue7'
 }
 param storageType = 'Standard_LRS'
 param storageAccountName = 'myStorageAccountName'
+<<<<<<<<< Temporary merge branch 1
+=========
+
+tags: {
+tagName3: 'tagValue3'
+tagName4: 'tagValue4'
+tagName1: 'tagValue1'
+tagName2: 'tagValue2'
+}
+>>>>>>>>> Temporary merge branch 2
