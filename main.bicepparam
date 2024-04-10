@@ -17,8 +17,3 @@ tagName7: 'tagValue7'
 }
 param storageType = 'Standard_LRS'
 param storageAccountName = 'myStorageAccountName'
-
-tags: {
-tagName1: 'tagValue1'
-tagName2: 'tagValue2'
-}
