@@ -7,10 +7,6 @@ tagName3: 'tagValue3-1'
 tagName4: 'tagValue4-1'
 tagName7: 'tagValue5-1'
 
-param location = 'westus'
-param sku = 'Standard'
-param capacity = 4
-
 tagName1: 'tagValue1'
 tagName2: 'tagValue2'
 tagName3: 'tagValue3'
