@@ -5,7 +5,13 @@ tagName1: 'tagValue1-1'
 tagName2: 'tagValue2-1'
 tagName3: 'tagValue3-1'
 tagName4: 'tagValue4-1'
-tagName7: 'tagValue5-1'
+tagName5: 'tagValue5-1'
+tagName6: 'tagValue6-1'
+tagName7: 'tagValue7-1'
+
+param location = 'westus'
+param sku = 'Standard'
+param capacity = 4
 //my notes//Mi notes from cloud
 tagName1: 'tagValue1'
 tagName2: 'tagValue2'
