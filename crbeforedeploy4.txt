@@ -1,0 +1,52 @@
+Note: The result may contain false positive predictions (noise).
+You can help us improve the accuracy of the result by opening an issue here: https://aka.ms/WhatIfIssues
+
+Resource and property changes are indicated with these symbols:
+  + Create
+  * Ignore
+
+The deployment will update the following scopes
+
+Scope: /subscriptions/5958e1d5-67f7-42d0-8ddf-702317b27f04
+
+  * resourceGroups/rg-vant-np3-t4-usaz [2022-09-01]
+
+Scope: /subscriptions/5958e1d5-67f7-42d0-8ddf-702317b27f04/resourceGroups/rg-vant-np3-t4-usaz
+
+  + Microsoft.Cache/redis/redis-vant-np3-t4-usaz [2023-08-01]
+
+      apiVersion:                                             "2023-08-01"
+      id:                                                     "/subscriptions/5958e1d5-67f7-42d0-8ddf-702317b27f04/resourceGroups/rg-vant-np3-t4-usaz/providers/Microsoft.Cache/redis/redis-vant-np3-t4-usaz"
+      location:                                               "usgovarizona"
+      name:                                                   "redis-vant-np3-t4-usaz"
+      properties.databases:                                   1
+      properties.enableNonSslPort:                            false
+      properties.minimumTlsVersion:                           "1.2"
+      properties.publicNetworkAccess:                         "Enabled"
+      properties.redisConfiguration.aad-enabled:              "true"
+      properties.redisConfiguration.hash-max-ziplist-entries: 512
+      properties.redisConfiguration.hash-max-ziplist-value:   64
+      properties.redisConfiguration.maxmemory-policy:         "volatile-lru"
+      properties.redisConfiguration.maxmemory-reserved:       "10"
+      properties.redisConfiguration.notify-keyspace-events:   "gxE"
+      properties.redisConfiguration.set-max-intset-entries:   512
+      properties.redisConfiguration.zset-max-ziplist-entries: 128
+      properties.redisConfiguration.zset-max-ziplist-value:   64
+      properties.sku.capacity:                                1
+      properties.sku.family:                                  "C"
+      properties.sku.name:                                    "Standard"
+      tags.Application Name:                                  "Vantage"
+      tags.Deployed By:                                       "geovanny.urgiles@ibm.com"
+      type:                                                   "Microsoft.Cache/redis"
+
+  * Microsoft.Insights/components/appi-vant-np3-t4-usaz
+  * Microsoft.KeyVault/vaults/kv-vant-np3-t4-usaz
+  * Microsoft.OperationalInsights/workspaces/ws-vant-np3-t4-usaz
+  * Microsoft.Sql/servers/sqldb-vant-np3-t4-usaz
+  * Microsoft.Sql/servers/sqldb-vant-np3-t4-usaz/databases/dbs-vant-np3-t4-usaz
+  * Microsoft.Sql/servers/sqldb-vant-np3-t4-usaz/databases/master
+  * Microsoft.Web/serverFarms/asp-vantapi-np3-t4-usaz
+  * Microsoft.Web/serverFarms/asp-vantapp-np3-t4-usaz
+  * microsoft.alertsmanagement/smartDetectorAlertRules/Failure Anomalies - appi-vant-np3-t4-usaz
+
+Resource changes: 1 to create, 10 to ignore.

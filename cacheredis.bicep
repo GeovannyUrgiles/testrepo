@@ -1,7 +1,5 @@
-//Converted into a Module from Microsoft "Create Rediscache - Bicep" file https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-cache-bicep-provision?tabs=CLI
-
-// Define the module parameters
-param cacheName string
+param tags object
+param cacheServiceName string
 param resourceGroupLocation string
 param cacheSKU string
 param cacheFamily string
@@ -11,25 +9,24 @@ param enableNonSslPort bool
 param maxmemorypolicy string
 param maxmemoryreserved string
 param notifykeyspaceevents string
-param rdbbackupenabled bool
-param rdbstorageconnectionstring string
-param rdbbackupfrequency string
+// param rdbbackupenabled bool
+// param rdbstorageconnectionstring string
+// param rdbbackupfrequency string
 param hashmaxziplistentries int
 param hashmaxziplistvalue int
 param setmaxintsetentries int
 param zsetmaxziplistentries int
 param zsetmaxziplistvalue int
 param databases int
-param builtInAccessPolicyName string
-param builtInAccessPolicyAssignmentName string
-param builtInAccessPolicyAssignmentObjectId string
-param builtInAccessPolicyAssignmentObjectAlias string
-param tags object
+// param builtInAccessPolicyName string
+// param builtInAccessPolicyAssignmentName string
+// param builtInAccessPolicyAssignmentObjectId string
+// param builtInAccessPolicyAssignmentObjectAlias string
 param publicnetworkaccess string
 
 // Create the Rediscache
-resource cache 'Microsoft.Cache/redis@2023-08-01' = {
-  name: cacheName
+resource cacheRedisService 'Microsoft.Cache/redis@2023-08-01' = {
+  name: cacheServiceName
   location: resourceGroupLocation
   tags: tags
   properties: {
@@ -47,9 +44,9 @@ resource cache 'Microsoft.Cache/redis@2023-08-01' = {
       'maxmemory-policy': maxmemorypolicy
       'maxmemory-reserved': maxmemoryreserved
       'notify-keyspace-events': notifykeyspaceevents
-      'rdb-backup-enabled': rdbbackupenabled
-      'rdb-storage-connection-string': rdbstorageconnectionstring
-      'rdb-backup-frequency': rdbbackupfrequency
+      // 'rdb-backup-enabled': rdbbackupenabled
+      // 'rdb-storage-connection-string': rdbstorageconnectionstring
+      // 'rdb-backup-frequency': rdbbackupfrequency
       'hash-max-ziplist-entries': hashmaxziplistentries
       'hash-max-ziplist-value': hashmaxziplistvalue
       'set-max-intset-entries': setmaxintsetentries
@@ -60,16 +57,16 @@ resource cache 'Microsoft.Cache/redis@2023-08-01' = {
 }
 
 // Create the built-in access policy assignment
-resource cacheBuiltInAccessPolicyAssignment 'Microsoft.cache/redis/accessPolicyAssignments@2023-08-01' = {
-  name: builtInAccessPolicyAssignmentName
-  parent: cache
-  properties: {
-    accessPolicyName: builtInAccessPolicyName
-    objectId: builtInAccessPolicyAssignmentObjectId
-    objectIdAlias: builtInAccessPolicyAssignmentObjectAlias
-  }
-}
+// resource cacheBuiltInAccessPolicyAssignment 'Microsoft.cache/redis/accessPolicyAssignments@2023-08-01' = {
+//   name: builtInAccessPolicyAssignmentName
+//   parent: cache
+//   properties: {
+//     accessPolicyName: builtInAccessPolicyName
+//     objectId: builtInAccessPolicyAssignmentObjectId
+//     objectIdAlias: builtInAccessPolicyAssignmentObjectAlias
+//   }
+// }
 
 //Output
-output cacheName string = cache.name
-output cacheResourceId string = cache.id
+output cacheRedisServiceName string = cacheRedisService.name
+output cacheRedisResourceId string = cacheRedisService.id
